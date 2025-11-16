@@ -84,7 +84,7 @@ class Player(Mob):
             elif choice == "3":
                 print(self.name.upper())
                 print(f"HP: {self.hp}, Energy: {self.energy}")
-                print(f"Defense: {self.base_defense}, Attack: {self.base_attack}")
+                print(f"Defense: {self.defense}, Attack: {self.base_attack}")
                 print("Inventory:")
                 self.check_inventory()
                 print()
@@ -173,4 +173,5 @@ class HealingItem(Item):
 class Armor(Item):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
         self.defense = kwargs['defense']
